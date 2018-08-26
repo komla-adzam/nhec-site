@@ -1,0 +1,112 @@
+$primary-color: rgb(53, 1, 1);
+$icon-size: 52px;
+body {
+    font-family: "Kosugi", sans-serif;
+}
+
+#showcase {
+    position: relative;
+    height: 100vh;
+    #slider-area {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    #slider-area .owl-item div {
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    #nav-area {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 24px;
+        .nav-item {
+            display: inline-block;
+            margin-right: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .nav-item:after {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 0;
+            background: transparent;
+            transition: width 0.5s ease, background-color 0.5s ease;
+        }
+        .nav-item:hover:after {
+            width: 100%;
+            background: rgb(29, 4, 1);
+        }
+    }
+    .slider-text {
+        position: absolute;
+        z-index: 10;
+        top: 40%;
+        left: 25%;
+        p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+}
+
+#showcase #nav-area {
+    z-index: 10;
+}
+
+#about-section {
+    .fas {
+        font-size: $icon-size;
+        color: $primary-color;
+    }
+}
+
+#members-section {
+    img {
+        margin-top: -50px;
+    }
+    .fab {
+        font-size: 25px;
+    }
+    .card:hover {
+        background: rgb(53, 1, 1);
+        color: #fff;
+        .fab {
+            color: #fff;
+        }
+    }
+}
+
+#projects-section {
+    background-color: $primary-color;
+    .img {
+        height: 400px;
+    }
+}
+
+#contact-section {
+    .menuitem {
+        display: inline-block;
+        margin-right: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .menuitem:after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0;
+        background: transparent;
+        transition: width 0.5s ease, background-color 0.5s ease;
+    }
+    .menuitem:hover:after {
+        width: 100%;
+        background: blue;
+    }
+}
